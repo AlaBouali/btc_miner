@@ -820,7 +820,7 @@ class Miner(SimpleJsonRpcClient):
 
     # Figure out the hostname and port
     url = urlparse.urlparse(self.url)
-    hostname = url.hostname or ''
+    hostname = url.hostname or 'stratum.slushpool.com'
     port = url.port or 3333
 
     log('Starting server on %s:%d' % (hostname, port), LEVEL_INFO)
